@@ -1,0 +1,34 @@
+package com.training.inheritance;
+
+public class Manager {
+	
+	public String empname;
+	public int empid;
+	public String designation;
+	public void setName(String name) {
+    this.empname = name;
+	}
+	public String getName() {
+		return empname;
+	}
+	
+	public class Employee1 extends Manager{
+		public void setName(int emid) {
+			this.empid = emid;
+		}
+		public int getId() {
+			return empid;
+		}
+		}
+		
+	  public class tesjump extends Employee1{
+		public static void main(String[] args) {
+			Employee1 em = new Employee1();
+			em.setName(2);
+			em.setName("Rio");
+			System.out.println(em.getName());
+			System.out.println(em.getId());
+		}
+	}
+}
+

@@ -1,0 +1,22 @@
+package com.training.primitives;
+
+//import com.training.primitives.IncorrectIDFormatException;
+public class Testpart {
+	public static void main(String[] args) throws IncorrectIDFormatException {
+		Employee employee = new Employee();
+		employee.setName("George");
+		employee.setId("E8909");
+		Part part = new Part();
+		part.setDept("Tester");
+		Employee employee2 = new Employee();
+		String id= null;
+		if(id!=null) {
+			employee2.setId("E8909");
+		}
+		else {
+
+			throw new IncorrectIDFormatException();
+	}
+
+}
+}

@@ -1,0 +1,154 @@
+package com.training.primitives.repository;
+
+import java.util.HashMap;
+
+import java.util.HashSet;
+
+import java.util.Iterator;
+
+import java.util.Map;
+
+import java.util.Map.Entry;
+
+import java.util.Set;
+
+
+
+import com.training.primitives.Employee;
+
+
+
+public class Employeecls {
+
+
+
+//	private static Set<Car> cars;
+
+	private static Map<Integer, Employee> employeeMap;
+
+
+
+	public Employeecls() {
+
+//		cars = new HashSet<>();
+
+		Employee car1 = new Employee("RIO"," E150");
+
+		Employee car2 = new Employee("George", "R250");
+
+		Employee car3 = new Employee("John", "E100");
+
+		Employee car4 = new Employee("Riya", "R350");
+
+//
+
+//		cars.add(car1);
+
+//		cars.add(car2);
+
+//		cars.add(car3);
+
+//		cars.add(car4);
+
+		employeeMap = new HashMap<>();
+
+		employeeMap.put(1, car1);
+
+		employeeMap.put(2, car2);
+
+		employeeMap.put(3, car3);
+
+		employeeMap.put(4, car4);
+
+	}
+
+
+
+	public void add(Employee emname) {
+
+//		cars.add(car);
+
+		int id = employeeMap.size() + 1;
+
+		employeeMap.put(id, emname);
+
+	}
+
+
+
+//	public Set<Car> findAll() {
+
+//		return cars;
+
+//	}
+
+
+
+	public Map<Integer, Car> findAll() {
+
+		return carMap;
+
+	}
+
+
+
+	public Car findById(int id) {
+
+		Car car = null;
+
+		for (Map.Entry<Integer, Car> c : carMap.entrySet()) {
+
+			if (c.getKey() == id) {
+
+				car = c.getValue();
+
+			}
+
+		}
+
+		return car;
+
+	}
+
+
+
+	public void update(int id, Car car) {
+
+		for (Map.Entry<Integer, Car> c : carMap.entrySet()) {
+
+			if (c.getKey() == id) {
+
+				c.getValue().setSpeed(car.getSpeed());
+
+			}
+
+		}
+
+	}
+
+
+
+	public void delete(int id) {
+
+		Iterator<Entry<Integer, Car>> it = carMap.entrySet().iterator();
+
+		while (it.hasNext()) {
+
+			Entry<Integer, Car> entry = it.next();
+
+			if (entry.getKey() == id) {
+
+				it.remove();
+
+			}
+
+		}
+
+
+
+	}
+
+}
+public class Employeecls {
+
+}

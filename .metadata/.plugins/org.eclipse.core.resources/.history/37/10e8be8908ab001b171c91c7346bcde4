@@ -1,0 +1,12 @@
+package com.training.employinheritance;
+
+public class Managerr extends Mployee {
+	
+	public Managerr(String name) {
+		super(name);
+	}
+ public String getName() {
+	 return name;
+ }
+ }
+ 

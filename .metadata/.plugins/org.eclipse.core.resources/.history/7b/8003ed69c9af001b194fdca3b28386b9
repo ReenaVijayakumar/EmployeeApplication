@@ -1,0 +1,37 @@
+package com.training.primitives;
+
+public class Employee {
+
+	private String empid;
+	private String empname;
+	private Part part;
+	public Employee() {
+	}
+	public Employee	(String empname,int empid) {
+		this.empname = empname;
+		this.empid = empid;
+	}
+	public void setName(String empname) {
+		this.empname = empname;
+	}
+	public String getName() {
+		return empname;
+	}
+	public void setId(String empid) {
+		this.empid = empid;
+	}
+	public String getId() {
+		return empid;
+	}
+	public void setpart(Part part) {
+		this.part= part;
+	}
+	public Part getpart() {
+		return part;
+	}
+	
+	public String toString() {
+
+		return "Name : " + empname + " ID : " + empid +" part :"+ part;
+}
+}

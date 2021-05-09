@@ -1,0 +1,18 @@
+package com.training.primitives.collections;
+
+import com.training.primitives.Employee;
+import java.util.HashSet;
+
+public class Employeeset {
+	HashSet<Employee> Employees = new HashSet<Employee>();
+	Employee employee1 = new Employee("RIO","1");
+	Employee employee2 = new Employee("George","2");
+	
+	System.out.println(employee1.hashCode());
+
+	System.out.println(employee2.hashCode());
+	
+	Employees.add(employee1);
+
+	Employees.add(employee2);
+}

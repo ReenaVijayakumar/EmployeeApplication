@@ -1,0 +1,79 @@
+package com.training.primitives.repository;
+
+import java.util.Map;
+
+ import com.training.primitives.Employee;
+ 
+ import com.training.primitives.IncorrectIDFormatException;
+ 
+ import com.training.primitives.repository.Employeecls;
+
+public class Employeeservice {
+	
+	private Employeecls employeecls;
+
+
+
+	public Employeeservice() {
+
+		 employeecls = new Employeecls();
+
+	}
+
+
+
+	public void createemployee(Employee employee) {
+
+		employeecls.add(employee);
+
+	}
+
+
+
+
+
+
+
+	public Map<Integer, Employee> findAllEmployee() {
+
+		return employeecls.findAll();
+
+	}
+
+
+
+	public Employee findCarById(int id) throws IncorrectIDFormatException {
+
+		Employee employee = employeecls.findById(id);
+
+		if (employee == null) {
+
+			throw new IncorrectIDFormatException("Employee ID is not found");
+
+		} else {
+
+			return employee;
+
+		}
+
+	}
+
+
+
+	public void updateemployee(int id, Employee employee) {
+
+		employeecls.update(id, employee);
+
+	}
+
+
+
+	public void deleteemployee(int id) {
+
+		employeecls.delete(id);
+
+	}
+
+}
+
+

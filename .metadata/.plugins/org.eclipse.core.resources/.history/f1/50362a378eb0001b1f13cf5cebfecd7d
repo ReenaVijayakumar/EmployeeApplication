@@ -1,0 +1,108 @@
+package com.training.primitives.repository;
+
+
+import com.training.primitives.Employee;
+
+import com.training.primitives.IncorrectIDFormatException;
+
+import com.training.primitives.repository.Employeecls;
+
+import java.util.Map;
+
+public class Employeetestmain {
+	
+	public static void main(String[] args) {
+
+
+			System.out.println("1.Create a New Employee");
+
+			Employeeservice employeeservice = new Employeeservice();
+
+
+
+			Employee employee = new Employee();
+
+			employee.setName("nano");
+
+			employee.setId(100);
+
+			employeeservice.createemployee(employee);
+
+
+
+
+			System.out.println("2.Find All Employee");
+
+			Map<Integer, Employee> employees = employeeservice.findAllEmployee();
+
+			for (Map.Entry<Integer, Employee> c : employees.entrySet()) {
+
+				System.out.println(c.getKey() + ": " + c.getValue());
+
+			}
+
+
+
+			System.out.println("3.Find A employee By Given Id");
+
+			int id = 1150;
+
+
+
+			try {
+
+				Employee foundemployee = employeeservice.findCarById(id);
+
+				System.out.println(foundemployee);
+
+			} catch (IncorrectIDFormatException e) {
+
+
+
+			}
+
+
+
+			System.out.println("4.Update A employee By Given Id");
+
+			int updateId = 15;
+
+			Employee newCar = new Employee();
+
+			newCar.setId(150);
+
+			employeeservice.updateemployee(updateId, newCar);
+
+
+
+			employees = employeeservice.findAllEmployee();
+
+			for (Map.Entry<Integer, Employee> c : employees.entrySet()) {
+
+				System.out.println(c.getKey() + ": " + c.getValue());
+
+			}
+
+
+
+			System.out.println("5.Delete A Car By Given Id");
+
+			int deleteId = 3;
+
+			employeeservice.deleteemployee(deleteId);
+
+			employees = employeeservice.findAllEmployee();
+
+			for (Map.Entry<Integer, Employee> c : employees.entrySet()) {
+
+				System.out.println(c.getKey() + ": " + c.getValue());
+
+			}
+
+
+
+		}
+
+	
+
+}

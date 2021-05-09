@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.training.inheritance.Manager.Employee"/>
+    <fullyQualifiedTypeName name="com.training.employinheritance.Mployee"/>
+    <fullyQualifiedTypeName name="com.training.employinheritance.Circle"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="sun.java2d.loops.XorPixelWriter.IntData"/>
+    <fullyQualifiedTypeName name="com.training.primitives.IncorrectIDFormatException"/>
+    <fullyQualifiedTypeName name="com.training.primitives.Employee"/>
+</qualifiedTypeNameHistroy>

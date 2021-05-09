@@ -1,0 +1,9 @@
+package com.training.primitives;
+
+ @SuppressWarnings("serial")
+public class IncorrectIDFormatException extends Exception {
+	public IncorrectIDFormatException() {
+		System.out.println("Enter the format as" + " " + "eg:E8909");
+	}
+
+}

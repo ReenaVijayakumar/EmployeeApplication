@@ -1,0 +1,13 @@
+package com.training.employinheritance;
+
+public class Mployetest {
+	
+	public static void main(String[] args) {
+		
+		Developer devob = new Developer();
+		devob.setName("RIO");
+		System.out.println(devob.getname());
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.training.employinheritance;
+
+public interface Calculation {
+	
+	 void caluculate();
+	 void Print();
+	
+	}

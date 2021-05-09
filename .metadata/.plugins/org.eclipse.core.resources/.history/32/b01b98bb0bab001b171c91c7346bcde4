@@ -1,0 +1,15 @@
+package com.training.employinheritance;
+
+public class Developer extends Managerr {
+	
+	public void setName(String ename) {
+		
+		name=ename;
+		
+	}
+	public String getname() {
+		return name;
+	}
+	
+
+}

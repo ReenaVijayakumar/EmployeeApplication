@@ -1,0 +1,11 @@
+package com.training.primitives;
+
+public class Testarray {
+	public static void main(String [] args) {
+		Employee emobj = new Employee();
+		emobj.setName("George");
+		System.out.println("Name of the employee" + " " + emobj.getName());
+		emobj.setId(6123);
+		System.out.println("Name of the employee" + " " + emobj.getId());
+	}
+}

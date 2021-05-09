@@ -1,0 +1,15 @@
+package com.training.employinheritance;
+
+public class Mployetest {
+	
+	public static void main(String[] args) {
+		Mployee mplob = new Mployee("George","Tester");
+		System.out.println(mplob.getName());
+		System.out.println(mplob.getdesignation());
+		Managerr mob = new Managerr("Rio","Developer");
+		System.out.println(mob.getdesignation());
+		System.out.println(mob.getName());
+		
+	}
+
+}

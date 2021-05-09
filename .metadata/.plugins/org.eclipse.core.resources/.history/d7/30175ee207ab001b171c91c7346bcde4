@@ -1,0 +1,11 @@
+package com.training.employinheritance;
+
+public class Managerr extends Mployee {
+	
+	public  Managerr(String ename) {
+		name = ename;
+	}
+ public Managerr() {
+	 System.out.println("....");
+ }
+ }

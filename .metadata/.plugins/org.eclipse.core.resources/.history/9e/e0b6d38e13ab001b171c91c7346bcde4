@@ -1,0 +1,9 @@
+package com.training.employinheritance;
+
+public abstract class Shape {
+	abstract void calculateArea();
+	void draw() {
+		System.out.println("Drawing a circle");
+	}
+
+}

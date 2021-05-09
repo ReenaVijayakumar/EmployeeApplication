@@ -1,0 +1,140 @@
+package com.training.primitives.repository;
+
+import java.util.HashMap;
+
+//import java.util.HashSet;
+
+import java.util.Iterator;
+
+import java.util.Map;
+
+import java.util.Map.Entry;
+
+//import java.util.Set;
+
+
+
+import com.training.primitives.Employee;
+
+import com.training.primitives.Department;
+
+
+
+public class Employeecls {
+
+
+
+
+
+	private static Map<Integer, Employee> employeeMap;
+
+
+
+	public Employeecls() {
+
+
+
+		Employee employee1 = new Employee("RIO",1150);
+
+		Employee employee2 = new Employee("George", 250);
+
+		Employee employee3 = new Employee("John", 100);
+
+		Employee employee4 = new Employee("Riya", 350);
+
+        Department department = new Department();
+        
+        department.setId(1);
+        department.setName("Developer");
+        employee1.setDepartm(department);
+
+		employeeMap = new HashMap<>();
+
+		employeeMap.put(1, employee1);
+
+		employeeMap.put(2, employee2);
+
+		employeeMap.put(3, employee3);
+
+		employeeMap.put(4, employee4);
+
+	}
+
+
+
+	public void add(Employee emname) {
+
+
+
+		int id = employeeMap.size() + 1;
+
+		employeeMap.put(id, emname);
+
+	}
+
+
+  public Map<Integer, Employee> findAll() {
+
+		return employeeMap;
+
+	}
+
+
+public Employee findById(int id) {
+
+		Employee employee = null;
+
+		for (Map.Entry<Integer, Employee> c : employeeMap.entrySet()) {
+
+			if (c.getKey() == id) {
+
+				employee = c.getValue();
+
+			}
+
+		}
+
+		return employee;
+
+	}
+
+
+
+	public void update(int id, Employee employee) {
+
+		for (Map.Entry<Integer, Employee> c : employeeMap.entrySet()) {
+
+			if (c.getKey() == id) {
+
+				c.getValue().setId(employee.getId());
+
+			}
+
+		}
+
+	}
+
+
+
+	public void delete(int id) {
+
+		Iterator<Entry<Integer, Employee>> it = employeeMap.entrySet().iterator();
+
+		while (it.hasNext()) {
+
+			Entry<Integer, Employee> entry = it.next();
+
+			if (entry.getKey() == id) {
+
+				it.remove();
+
+			}
+
+		}
+
+
+
+	}
+
+}
+
